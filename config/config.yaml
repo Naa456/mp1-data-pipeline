@@ -1,3 +1,15 @@
+
+validation:
+  required_columns:
+    - record_id
+    - name
+    - rating
+    - category
+    - status
+
+  numeric_columns:
+    - rating
+
 processing:
   remove_duplicates: true
 
@@ -8,6 +20,6 @@ processing:
   outliers:
     enabled: true
     columns:
-      - Score
+      - rating
     method: "iqr"
     threshold: 1.5
